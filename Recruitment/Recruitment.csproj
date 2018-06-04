@@ -203,6 +203,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Mapping\Mapp.cs" />
     <Compile Include="Models\Candidates.cs" />
     <Compile Include="Models\EntityFramework\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -219,13 +220,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\EntityFramework\Recruitment.cs">
+    <Compile Include="Models\EntityFramework\Rec.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EntityFramework\Staff.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\GetInformationEntity.cs" />
+    <Compile Include="Models\GetInformationNhiber.cs" />
     <Compile Include="Models\Nhibernate\NhibernateSession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

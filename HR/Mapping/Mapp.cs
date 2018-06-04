@@ -15,17 +15,17 @@ namespace HR.Mapping
 
         public List<Employees> GetInfor()
         {
-            return nhiber.GetAllInfor();
+            return en.GetAllInfor();
         }
 
         public bool Checkid(Employees employ)
         {
-            return nhiber.CheckID(employ);
+            return en.CheckID(employ);
         }
 
         public Staff Insert(Employees employeeInfor)
         {
-            return nhiber.InsertInfor(employeeInfor);
+            return en.InsertInfor(employeeInfor);
         }
     }
 }

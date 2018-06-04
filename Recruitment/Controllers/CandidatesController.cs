@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Recruitment.Models;
+using Recruitment.Mapping;
 
 namespace Recruitment.Controllers
 {
@@ -13,12 +14,21 @@ namespace Recruitment.Controllers
         public List<Candidates> GetAllCandidate()
 
         {
-            GetInformationEntity data = new GetInformationEntity();
-            List<Candidates> listCandidate = data.GetAllInfor();
+            Mapp data = new Mapp();
+            //GetInformationEntity data = new GetInformationEntity();
+            List<Candidates> listCandidate = data.GetInfor();
             return listCandidate;
         }
 
+        [HttpPost]
+        public HttpResponseMessage CreateNewInfor(HttpRequestMessage request, Candidates employeeInfor)
+        {
+            Mapp data = new Mapp();
+            string Name = employeeInfor.Name;
+            return request.CreateResponse(HttpStatusCode.OK, data.Insert(Name));
 
+
+        }
 
 
         //public IEnumerable<Candidate_Infor> GetAllCandidate()

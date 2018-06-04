@@ -17,7 +17,7 @@ namespace Recruitment.Models
 
             using (HREntities db = new HREntities())
             {
-                var candidate = db.Recruitments.ToList();
+                var candidate = db.Recs.ToList();
                 foreach (var item in candidate)
                 {
 
@@ -33,6 +33,21 @@ namespace Recruitment.Models
             }
 
             return candidateList;
+        }
+
+        public Staff InsertInfor(string employinfor)
+        {
+            using (HREntities db = new HREntities())
+            {
+                Staff employee = new Staff();
+
+                employee.Name = employinfor;
+                employee.Department = "IT";
+                employee.Salary = "GeLuootL/vhSl/ZRITFGhA==";
+                db.Staffs.Add(employee);
+                db.SaveChanges();
+                return employee;
+            }
         }
     }
 }

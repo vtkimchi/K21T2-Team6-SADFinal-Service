@@ -25,7 +25,7 @@ namespace Recruitment.Models.EntityFramework
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Recruitment> Recruitments { get; set; }
+        public virtual DbSet<Rec> Recs { get; set; }
         public virtual DbSet<Staff> Staffs { get; set; }
     }
 }
