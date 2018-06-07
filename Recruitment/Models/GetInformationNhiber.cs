@@ -43,25 +43,24 @@ namespace Recruitment.Models
             }
         }
 
-        public Rec InsertInfor(Candidates staffinfor)
+        public Staff InsertInfor(string staffinfor)
         {
-            Rec RC = new Rec();
+            Staff st = new Staff();
             using (ISession session = NhibernateSession.OpenSession())
             {
                 using (var trans = session.BeginTransaction())
                 {
-                    Candidates cand = new Candidates();
-                    cand.Name = staffinfor.Name;
-                    cand.Birthday = staffinfor.Birthday;
-                    cand.Phone = staffinfor.Phone;
+                    Employees staff = new Employees();
+                    staff.Name = staffinfor;
+                    staff.Department = "IT";
+                    staff.Salary = "GeLuootL/vhSl/ZRITFGhA==";
 
-                    session.SaveOrUpdate(cand);
+                    session.Save(staff);
                     trans.Commit();
-                    return RC;
+                    return st;
                 }
             }
         }
-
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="HR" namespace="HR.Models">
-  <class name="Candidates" table="Recruitment" dynamic-update="true" >
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="Recruitment" namespace="Recruitment.Models">
+  <class name="Candidates" table="Rec" dynamic-update="true" >
     <cache usage="read-write"/>
     <id name="ID" column="ID" type="int">
       <generator class="identity"/>

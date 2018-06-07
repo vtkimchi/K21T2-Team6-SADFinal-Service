@@ -18,6 +18,5 @@ namespace Recruitment.Models.EntityFramework
         public string Name { get; set; }
         public Nullable<System.DateTime> Birthday { get; set; }
         public string Phone { get; set; }
-        public bool Status { get; set; }
     }
 }

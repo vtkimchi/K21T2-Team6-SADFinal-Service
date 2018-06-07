@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Recruitment.Models.EntityFramework;
+using Recruitment.Models.Nhibernate;
 
 
 namespace Recruitment.Mapping
